@@ -1,0 +1,1 @@
+docker run -p 7474:7474 -p 7687:7687 -v /home/treilly/Documents/docker/neo4j/data:/data --name neo4j neo4j
