@@ -1,3 +1,5 @@
+# Data can be loaded using this tutorial https://www.elastic.co/guide/en/kibana/current/tutorial-load-dataset.html
+
 version: '3.1'
 
 services:
