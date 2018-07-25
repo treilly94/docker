@@ -1,1 +1,1 @@
-docker run --name neo4j -p 7474:7474 -p 7687:7687 -v /home/treilly/Documents/docker/neo4j/data:/data -d neo4j
+docker run --name neo4j -p 7474:7474 -p 7687:7687 -v /home/treilly/Documents/docker/neo4j/data:/data -d --env=NEO4J_AUTH=none neo4j
