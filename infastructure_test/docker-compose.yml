@@ -6,8 +6,17 @@ services:
   kafka:
     build: ./kafka
 
-  kudu:
+  kudu-master:
     build: ./kudu
+    ports: 
+      - "8051:8051"
+    stdin_open: true
+    tty: true
+    #command: service kudu-master start
 
   spark:
     build: ./spark 
+    volumes:
+      - ./spark/data:/data/
+    stdin_open: true
+    tty: true
