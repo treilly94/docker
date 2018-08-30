@@ -5,18 +5,28 @@ version: '3.1'
 services:
   kafka:
     build: ./kafka
+    ports:
+      - "9092:9092"
 
-  kudu-master:
-    build: ./kudu
-    ports: 
-      - "8051:8051"
-    stdin_open: true
-    tty: true
-    #command: service kudu-master start
+  # kudu-master:
+  #   build: ./kudu
+  #   ports: 
+  #     - "8051:8051"
+  #   stdin_open: true
+  #   tty: true
+  #   #command: service kudu-master start
 
-  spark:
-    build: ./spark 
-    volumes:
-      - ./spark/data:/data/
-    stdin_open: true
-    tty: true
+  # kudu-tablet:
+  #   build: ./kudu
+  #   ports: 
+  #     - "8050:8050"
+  #   stdin_open: true
+  #   tty: true
+  #   #command: service kudu-tserver start
+
+  # spark:
+  #   build: ./spark 
+  #   volumes:
+  #     - ./spark/data:/data/
+  #   stdin_open: true
+  #   tty: true
