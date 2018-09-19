@@ -18,6 +18,6 @@ services:
   spark:
     build: ./spark 
     volumes:
-      - ./spark/data:/data/
+      - ./spark/data:/home/data/
     stdin_open: true
     tty: true
