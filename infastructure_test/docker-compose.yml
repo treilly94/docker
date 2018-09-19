@@ -8,19 +8,12 @@ services:
     ports:
       - "9092:9092"
 
-  kudu-master:
+  kudu:
     build: ./kudu
     ports: 
       - "8051:8051"
-    volumes:
-      - ./kudu/master/supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
-
-  kudu-tserver:
-    build: ./kudu
-    ports: 
+      - "7051:7051"
       - "8050:8050"
-    volumes:
-      - ./kudu/tserver/supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
 
   spark:
     build: ./spark 
