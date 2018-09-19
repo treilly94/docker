@@ -9,7 +9,4 @@ ADD http://archive.cloudera.com/kudu/ubuntu/xenial/amd64/kudu/cloudera.list /etc
 # Update package manager and install dependencies
 RUN apt-get update -y && apt-get install -y --allow-unauthenticated default-jdk kudu kudu-master kudu-tserver libkuduclient0 libkuduclient-dev supervisor
 
-# Configure supervisor to run both zookeper and kafka servers
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
 CMD ["/usr/bin/supervisord"]
